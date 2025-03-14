@@ -1,0 +1,124 @@
+/* NeoDunggeunmo 폰트 적용 */
+@font-face {
+  font-family: 'NeoDunggeunmo';
+  src: url('../fonts/neodgm.woff2') format('woff2'),
+       url('../fonts/neodgm.woff') format('woff'),
+       url('../fonts/neodgm.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 전체 페이지 설정 */
+body {
+  background-color: #0000AA; /* 파란 배경 (PC통신 스타일) */
+  color: #FFFFFF; /* 흰색 텍스트 */
+  font-family: 'NeoDunggeunmo', "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+/* ASCII 아트 한 글자씩 점멸 효과 */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ASCII 아트 개별 글자 점멸 */
+.ascii-title span {
+  display: inline-block;
+  animation: blink 2.5s infinite;
+}
+
+/* 개별 글자별 점멸 타이밍을 다르게 설정 */
+.ascii-title span:nth-child(odd) {
+  animation-delay: 2.5s;
+}
+.ascii-title span:nth-child(even) {
+  animation-delay: 2.5s;
+}
+.ascii-title span:nth-child(3n) {
+  animation-delay: 2.5s;
+}
+.ascii-title span:nth-child(4n) {
+  animation-delay: 2.5s;
+}
+
+/* 박스 스타일 (컨텐츠 영역) */
+.box {
+  border: 2px solid #FFFFFF;
+  padding: 10px;
+  width: 60%;
+  margin: 20px auto;
+  background-color: #0000AA; /* 박스 내부 색상도 배경색과 동일 */
+}
+
+/* 네비게이션 스타일 */
+.nav-box {
+  margin: 20px auto;
+  width: 60%;
+  padding: 10px;
+  border: 2px dashed #FFFFFF;
+  background-color: #0000AA;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* 네비게이션 제목 (메뉴 선택 안내) 중앙 정렬 */
+.nav-box .nav-title {
+  text-align: center;
+  display: block; /* 블록 요소로 만들어 중앙 정렬 가능하게 */
+  margin-bottom: 10px; /* 아래 메뉴와 간격 추가 */
+}
+
+/* 메뉴 항목 왼쪽 정렬 유지 */
+.nav-box p {
+  margin: 5px 0;
+}
+
+/* 메뉴 링크 스타일 */
+.nav-box a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'NeoDunggeunmo', "Courier New", Courier, monospace;
+}
+
+.nav-box a:hover {
+  text-decoration: underline;
+}
+
+/* 입력 창 스타일 (네비게이션 아래쪽으로 이동) */
+.input-box {
+  width: 60%;
+  margin: 10px auto;
+  text-align: left;
+  font-size: 16px;
+}
+
+.input-box span {
+  font-weight: bold;
+  color: #FFFFFF;
+  font-family: 'NeoDunggeunmo', "Courier New", Courier, monospace;
+}
+
+.input-box input {
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'NeoDunggeunmo', "Courier New", Courier, monospace;
+  font-size: 16px;
+  padding: 5px;
+  width: 40px;
+  text-align: center;
+  outline: none;
+  caret-color: #FFFFFF;
+}
+
+/* 푸터 스타일 */
+footer {
+  margin-top: 20px;
+  border-top: 1px solid #FFFFFF;
+  padding: 5px;
+  font-size: 14px;
+  background-color: #0000AA;
+  font-family: 'NeoDunggeunmo', "Courier New", Courier, monospace;
+}
