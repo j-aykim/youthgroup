@@ -19,43 +19,65 @@ body {
 /* ASCII 아트 한 글자씩 점멸 효과 */
 @keyframes blink {
   0% { opacity: 1; }
-  50% { opacity: 0; }
+  30% { opacity: 0; }
   100% { opacity: 1; }
 }
 
-/* ASCII 아트 개별 글자 점멸 */
+/* ASCII 아트 글자 점멸 */
 .ascii-title span {
   display: inline-block;
-  animation: blink 2.5s infinite;
+  animation: blink 1.5s infinite;
 }
 
-/* 개별 글자별 점멸 타이밍을 다르게 설정 */
-.ascii-title span:nth-child(odd) {
-  animation-delay: 2.5s;
+/* 사용자 그룹 이름 점멸 */
+.usergroup-name span {
+  text-align: center;
+  display: inline-block;
+  animation: blink 1.5s infinite;
 }
-.ascii-title span:nth-child(even) {
-  animation-delay: 2.5s;
+
+/* 로그인 박스 스타일*/
+.login-box {
+  border: 2px solid #FFFFFF;
+  padding: 20px;
+  width: 60%;
+  margin: 50px auto;
+  background-color: #0000AA;
+  text-align: center;
 }
-.ascii-title span:nth-child(3n) {
-  animation-delay: 2.5s;
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  font-size: 16px;
 }
-.ascii-title span:nth-child(4n) {
-  animation-delay: 2.5s;
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #FFFFFF;
+  color: #000080;
+  font-size: 16px;
+  cursor: pointer;
 }
+
 
 /* 박스 스타일 (컨텐츠 영역) */
 .box {
   border: 2px solid #FFFFFF;
   padding: 10px;
-  width: 95%;
+  width: 60%;
   margin: 20px auto;
-  background-color: #0000AA; /* 박스 내부 색상도 배경색과 동일 */
+  background-color: #0000AA;
+  padding-left: 20px;
 }
 
 /* 네비게이션 스타일 */
 .nav-box {
   margin: 20px auto;
-  width: 95%;
+  width: 60%;
   padding: 10px;
   border: 2px dashed #FFFFFF;
   background-color: #0000AA;
@@ -88,14 +110,14 @@ body {
 
 /* 입력 창 스타일 (네비게이션 아래쪽으로 이동) */
 .input-box {
-  width: 95%;
+  width: 63%;
   margin: 10px auto;
   text-align: left;
   font-size: 16px;
 }
 
 .input-box span {
-  font-weight: bold;
+  font-weight: normal;
   color: #FFFFFF;
   font-family: 'NeoDunggeunmo', "Courier New", Courier, monospace;
 }
